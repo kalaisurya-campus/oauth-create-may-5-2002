@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function Homepage(props) {
     const history = useHistory();
@@ -19,6 +19,8 @@ function Homepage(props) {
         <div>
             Homepage
             <button onClick={LogoutUser}>Logout</button>
+            <Link to="/images">PUsh</Link>
+            {/* <button onClick={history.push("/images")}>push</button> */}
         </div>
     );
 }

@@ -8,15 +8,17 @@ import "bootstrap/dist/js/bootstrap.js";
 import { Provider } from "react-redux";
 import store from "./Redux/Store/Stores";
 import GetDatasStoresApi from "./ContextApi/GetDatasStoresApi";
-
+import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
-        <GetDatasStoresApi>
-            <React.StrictMode>
-                <App />
-            </React.StrictMode>
-        </GetDatasStoresApi>
+        <BrowserRouter>
+            <GetDatasStoresApi>
+                <React.StrictMode>
+                    <App />
+                </React.StrictMode>
+            </GetDatasStoresApi>
+        </BrowserRouter>
     </Provider>
 );
 
