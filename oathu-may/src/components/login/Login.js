@@ -27,6 +27,7 @@ function Login(props) {
             toast("Email and Passord is Miss Matched");
         }
         history.push("/");
+        localStorage.setItem("usernamekalai", JSON.stringify([names]));
         localStorage.setItem("authset", true);
     };
     return (
