@@ -44,7 +44,7 @@ function App() {
                         <Route path="/anotherurl" component={Commondatas} />
                         <Route path="/forms" component={Conformpassword} />
                         <Route path="/focus" component={Foucs} />
-                        <Route path="/otp" component={OtpCheck}/>
+                        <Route path="/otp" component={OtpCheck} />
                     </Switch>
                 </Router>
             </div>

@@ -26,8 +26,8 @@ function Foucs(props) {
         }
     });
 
-    function changes(e) {
-        console.log(e);
+    function changes(event) {
+        console.log(event);
         let date = new Date();
         let shows =
             date.getDate() +
@@ -73,9 +73,9 @@ function Foucs(props) {
     }
     changes();
 
-    function move(event) {
-        console.log(event);
-    }
+    const move = (event) => {
+        console.log(event.children[0].src);
+    };
     return (
         <div className="focus-texts">
             <h1 id="scrolls"></h1>
@@ -187,29 +187,26 @@ function Foucs(props) {
                 </div>
 
                 <div className="next-images">
-                    <button onClick={() => changes(this)}>
+                    <div onClick={(e) => changes(this)}>
                         <img src="https://media.istockphoto.com/photos/puratchi-thalaivar-dr-mgr-central-railway-stationchennai-central-picture-id1226340114?k=20&m=1226340114&s=612x612&w=0&h=Fb2w07580AHJoElti5zras-TbBkv4ePkMcCXqoGfYLc=" />
-                    </button>
-                    <img
-                        src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
-                        onClick={() => changes()}
-                    />
-                    <img
-                        src="https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                        onClick={() => changes()}
-                    />
-                    <img
-                        src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2019/12/Love-Images-1.jpg"
-                        onClick={() => changes()}
-                    />
-                    <img
+                    </div>
+                    <div onClick={(e) => changes(this)}>
+                        <img src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" />
+                    </div>
+                    <div onClick={(e) => changes(this)}>
+                        <img src="https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                    </div>
+                    <div onClick={(e) => changes(this)}>
+                        <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2019/12/Love-Images-1.jpg" />
+                    </div>
+                    {/* <img
                         src="https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU="
                         onClick={() => changes()}
                     />
                     <img
                         src="https://media.istockphoto.com/photos/slave-hands-broken-chains-with-bird-flying-picture-id1296601764?b=1&k=20&m=1296601764&s=170667a&w=0&h=0hjKKZZYp2Wl1BRxopegdWrJwTwi1Vlbs_aXdmhhr_o="
                         onClick={() => changes()}
-                    />
+                    /> */}
                 </div>
             </div>
 

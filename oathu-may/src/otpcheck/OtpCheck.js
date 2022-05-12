@@ -5,7 +5,7 @@ function OtpCheck(props) {
     const [check, setCheck] = useState(" ");
     const handleChange = (check) => setCheck(check);
 
-    console.log("cekcls",check);
+    console.log("cekcls", check);
     return (
         <div className="mains-otp">
             <OtpInput
@@ -27,7 +27,10 @@ function OtpCheck(props) {
                     borderRadius: "5px",
                 }}
                 shouldAutoFocus={{
-                    border: "2px solid black",
+                    border: "2px solid red",
+                }}
+                errorStyle={{
+                    color: "red",
                 }}
             />
         </div>
