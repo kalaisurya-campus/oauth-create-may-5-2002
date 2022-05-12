@@ -12,6 +12,8 @@ import ReadMoreCards from "./components/readmorecards/ReadMoreCards";
 import PachiCommonDeploy from "./components/switchpachiyappandata/PachiCommonDeploy";
 import Commondatas from "./components/switchstatementsin/Commondatas";
 import Conformpassword from "./components/conformpasswordcheck/Conformpassword";
+import Foucs from "./focus/Foucs";
+import OtpCheck from "./otpcheck/OtpCheck";
 function App() {
     const getcolorset = () => {
         return JSON.parse(localStorage.getItem("themes-dark"));
@@ -40,7 +42,9 @@ function App() {
                             component={PachiCommonDeploy}
                         />
                         <Route path="/anotherurl" component={Commondatas} />
-                        <Route path="/forms" component={Conformpassword}/>
+                        <Route path="/forms" component={Conformpassword} />
+                        <Route path="/focus" component={Foucs} />
+                        <Route path="/otp" component={OtpCheck}/>
                     </Switch>
                 </Router>
             </div>

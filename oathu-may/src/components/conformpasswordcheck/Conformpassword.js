@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 
 function Conformpassword(props) {
-
-    const [passwords,SetPasswords]=useState("");
-    const [passwordsconform,SetConformPasswords]=useState("");
-    const [passwordserror,SetConformerror]=useState("");
+    const [passwords, SetPasswords] = useState("");
+    const [passwordsconform, SetConformPasswords] = useState("");
+    const [passwordserror, SetConformerror] = useState("");
     return (
         <div>
             <form>
